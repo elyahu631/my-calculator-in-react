@@ -25,21 +25,18 @@ export default class CCMain extends Component {
 
   addAction = (id) => {
     let firstNum = this.state.num1;
-    console.log("first: ",firstNum);
+
     let SecondNum = this.state.num2;
-    console.log("second: ",SecondNum);
 
 
-    if(firstNum === undefined || firstNum === '' || SecondNum === null || SecondNum === '' ){
+
+    if(firstNum === null || firstNum === '' || SecondNum === null || SecondNum === '' ){
       console.log(firstNum === null === '' || SecondNum === null === '');
         alert("There is an empty input")
         this.setState({res: ''});
-        console.log("lll");
-        console.log(this.state.res);
         return;
     }
     let finalresult = parseInt(firstNum) + parseInt(SecondNum);
-    console.log(finalresult);
     this.setState({res: String(finalresult)})
   }
 
